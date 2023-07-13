@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Processing Result</title>
+    <style>
+        .dialogue {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Processing Result</h1>
+    
+    {% for index in range(extracted_text|length) %}
+        {% set text = extracted_text[index] %}
+        <div class="dialogue">
+            <h3>Diálogo {{ index+1 }}</h3>
+            <p>{{ text }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
